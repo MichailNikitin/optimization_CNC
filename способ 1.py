@@ -1,4 +1,7 @@
+import math as m
+
 sp = pripd_pak = dpak = tp_ob = []
+M_PI = 3.14159265358979323846
 
 def main():
     print("ввод данных по заготовке и детали")
@@ -38,6 +41,12 @@ def main():
     print(f"nd={nd}  zmax={zmax}  sp[0]={sp[0]}  sp[1]={sp[1]}  tp_ob[0]={tp_ob[0]}  tp_ob[1]={tp_ob[1]}")
     print(f"pripd_max={pripd_max}  pripd_pak[0]={pripd_pak[0]}  pripd_pak[1]={pripd_pak[1]}")
     print(f"dpak[0]={dpak[0]}  dpak[1]={dpak[1]}")
+    input()
+    print("расчет коэффициентов")
+    k3 = M_PI * dz_max * b * sigma * etgb * nd / vk  # первый коф - т в формуле силы Ру через tф
+    k4 = stzat * sigma * b * m.sqrt(dz_max * dk / (dz_max + dk)) / 3  # второй коф - т в формуле силы Ру через tф
+    с1_tf_ob = 0.5 * podatl * k4 / (1 + k3 * podatl)  # коэф в формуле tf_ob
+    print(f"k3={k3}  k4={k4}")
 
 
 if __name__ == '__main__':
