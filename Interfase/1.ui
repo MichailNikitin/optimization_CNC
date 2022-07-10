@@ -6,8 +6,8 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>1280</width>
-    <height>720</height>
+    <width>1150</width>
+    <height>741</height>
    </rect>
   </property>
   <property name="windowTitle">
@@ -22,86 +22,596 @@
       </property>
      </widget>
     </item>
-    <item row="1" column="0">
-     <widget class="QPushButton" name="add_grafs">
-      <property name="text">
-       <string>+</string>
-      </property>
-     </widget>
-    </item>
     <item row="0" column="0">
      <widget class="QTabWidget" name="MainTabWidget">
+      <property name="enabled">
+       <bool>true</bool>
+      </property>
+      <property name="layoutDirection">
+       <enum>Qt::LeftToRight</enum>
+      </property>
       <property name="currentIndex">
        <number>1</number>
       </property>
       <widget class="QWidget" name="results">
        <attribute name="title">
-        <string>Tab 1</string>
+        <string>Результаты</string>
        </attribute>
        <layout class="QGridLayout" name="gridLayout_12"/>
       </widget>
       <widget class="QWidget" name="input_par">
        <attribute name="title">
-        <string>Tab 2</string>
+        <string>Ввод параметров</string>
        </attribute>
        <layout class="QGridLayout" name="gridLayout_10">
         <item row="0" column="0">
          <widget class="QTabWidget" name="GrafsTabWidget">
+          <property name="toolTipDuration">
+           <number>-1</number>
+          </property>
           <property name="currentIndex">
            <number>0</number>
           </property>
+          <property name="iconSize">
+           <size>
+            <width>20</width>
+            <height>20</height>
+           </size>
+          </property>
+          <property name="usesScrollButtons">
+           <bool>true</bool>
+          </property>
+          <property name="movable">
+           <bool>true</bool>
+          </property>
           <widget class="QWidget" name="graf_1">
            <attribute name="title">
-            <string>Tab 1</string>
+            <string>График 1</string>
            </attribute>
            <layout class="QVBoxLayout" name="verticalLayout">
             <item>
              <widget class="QWidget" name="param_1" native="true">
               <layout class="QGridLayout" name="gridLayout_6">
-               <item row="1" column="0">
-                <widget class="QWidget" name="widget" native="true"/>
-               </item>
-               <item row="0" column="0">
+               <property name="horizontalSpacing">
+                <number>65</number>
+               </property>
+               <item row="0" column="1">
                 <widget class="QWidget" name="widget_2" native="true">
-                 <layout class="QVBoxLayout" name="verticalLayout_3">
-                  <item>
+                 <property name="baseSize">
+                  <size>
+                   <width>0</width>
+                   <height>0</height>
+                  </size>
+                 </property>
+                 <layout class="QGridLayout" name="gridLayout">
+                  <property name="sizeConstraint">
+                   <enum>QLayout::SetDefaultConstraint</enum>
+                  </property>
+                  <property name="leftMargin">
+                   <number>6</number>
+                  </property>
+                  <property name="topMargin">
+                   <number>7</number>
+                  </property>
+                  <property name="rightMargin">
+                   <number>11</number>
+                  </property>
+                  <property name="bottomMargin">
+                   <number>21</number>
+                  </property>
+                  <property name="horizontalSpacing">
+                   <number>20</number>
+                  </property>
+                  <property name="verticalSpacing">
+                   <number>0</number>
+                  </property>
+                  <item row="1" column="0">
+                   <widget class="QWidget" name="widget_4" native="true">
+                    <layout class="QFormLayout" name="formLayout">
+                     <property name="fieldGrowthPolicy">
+                      <enum>QFormLayout::AllNonFixedFieldsGrow</enum>
+                     </property>
+                     <property name="horizontalSpacing">
+                      <number>11</number>
+                     </property>
+                     <property name="verticalSpacing">
+                      <number>11</number>
+                     </property>
+                     <property name="leftMargin">
+                      <number>11</number>
+                     </property>
+                     <property name="topMargin">
+                      <number>11</number>
+                     </property>
+                     <property name="rightMargin">
+                      <number>0</number>
+                     </property>
+                     <property name="bottomMargin">
+                      <number>11</number>
+                     </property>
+                     <item row="0" column="0">
+                      <widget class="QLabel" name="label_2">
+                       <property name="text">
+                        <string>Диаметр заготовки, мм / dz_max</string>
+                       </property>
+                      </widget>
+                     </item>
+                     <item row="0" column="1">
+                      <widget class="QLineEdit" name="lineEdit">
+                       <property name="enabled">
+                        <bool>true</bool>
+                       </property>
+                      </widget>
+                     </item>
+                     <item row="1" column="0">
+                      <widget class="QLabel" name="label_3">
+                       <property name="text">
+                        <string>Допуск диаметра заготовки, мм / tdz</string>
+                       </property>
+                      </widget>
+                     </item>
+                     <item row="1" column="1">
+                      <widget class="QLineEdit" name="lineEdit_2"/>
+                     </item>
+                     <item row="2" column="0">
+                      <widget class="QLabel" name="label_4">
+                       <property name="text">
+                        <string>Габаритная длина заготовки, мм / gab_dz</string>
+                       </property>
+                      </widget>
+                     </item>
+                     <item row="2" column="1">
+                      <widget class="QLineEdit" name="lineEdit_3"/>
+                     </item>
+                     <item row="3" column="0">
+                      <widget class="QLabel" name="label_5">
+                       <property name="text">
+                        <string>Модуль упругости заготовки, мм / E</string>
+                       </property>
+                      </widget>
+                     </item>
+                     <item row="3" column="1">
+                      <widget class="QLineEdit" name="lineEdit_4"/>
+                     </item>
+                     <item row="4" column="0">
+                      <widget class="QLabel" name="label_6">
+                       <property name="text">
+                        <string>Сигма текучести заготовки, Н/м^2 /sum_flz</string>
+                       </property>
+                      </widget>
+                     </item>
+                     <item row="4" column="1">
+                      <widget class="QLineEdit" name="lineEdit_5"/>
+                     </item>
+                    </layout>
+                   </widget>
+                  </item>
+                  <item row="3" column="0">
+                   <widget class="QWidget" name="widget_3" native="true">
+                    <layout class="QFormLayout" name="formLayout_4">
+                     <property name="horizontalSpacing">
+                      <number>11</number>
+                     </property>
+                     <property name="rightMargin">
+                      <number>0</number>
+                     </property>
+                     <item row="1" column="0">
+                      <widget class="QLabel" name="label_22">
+                       <property name="text">
+                        <string>Диаметр детали, мм / dd_max</string>
+                       </property>
+                      </widget>
+                     </item>
+                     <item row="1" column="1">
+                      <widget class="QLineEdit" name="lineEdit_19"/>
+                     </item>
+                     <item row="2" column="1">
+                      <widget class="QLineEdit" name="lineEdit_21"/>
+                     </item>
+                     <item row="3" column="1">
+                      <widget class="QLineEdit" name="lineEdit_22"/>
+                     </item>
+                     <item row="4" column="1">
+                      <widget class="QLineEdit" name="lineEdit_20"/>
+                     </item>
+                     <item row="2" column="0">
+                      <widget class="QLabel" name="label_23">
+                       <property name="text">
+                        <string>Ширина шлифования детали, мм / B</string>
+                       </property>
+                      </widget>
+                     </item>
+                     <item row="3" column="0">
+                      <widget class="QLabel" name="label_24">
+                       <property name="text">
+                        <string>Допуск диаметра детали, мм / td</string>
+                       </property>
+                      </widget>
+                     </item>
+                     <item row="4" column="0">
+                      <widget class="QLabel" name="label_25">
+                       <property name="text">
+                        <string>Шероховатость диаметра детали, мкм 
+/ rgn_dd</string>
+                       </property>
+                      </widget>
+                     </item>
+                     <item row="5" column="0">
+                      <widget class="QLabel" name="label_29">
+                       <property name="text">
+                        <string>Длина шлифуемой поверхности
+детали, мм / b</string>
+                       </property>
+                      </widget>
+                     </item>
+                     <item row="6" column="0">
+                      <widget class="QLabel" name="label_30">
+                       <property name="text">
+                        <string>Интенсивность напряжений, 
+кг/мм^2 / sigma</string>
+                       </property>
+                      </widget>
+                     </item>
+                     <item row="7" column="0">
+                      <widget class="QLabel" name="label_31">
+                       <property name="text">
+                        <string>Припуск на диаметр детали, мм</string>
+                       </property>
+                      </widget>
+                     </item>
+                     <item row="5" column="1">
+                      <widget class="QLineEdit" name="lineEdit_25"/>
+                     </item>
+                     <item row="6" column="1">
+                      <widget class="QLineEdit" name="lineEdit_26"/>
+                     </item>
+                     <item row="7" column="1">
+                      <widget class="QLineEdit" name="lineEdit_27"/>
+                     </item>
+                    </layout>
+                   </widget>
+                  </item>
+                  <item row="3" column="1">
+                   <widget class="QWidget" name="widget_6" native="true">
+                    <layout class="QFormLayout" name="formLayout_5">
+                     <property name="horizontalSpacing">
+                      <number>11</number>
+                     </property>
+                     <property name="rightMargin">
+                      <number>0</number>
+                     </property>
+                     <item row="0" column="0">
+                      <widget class="QLabel" name="label_26">
+                       <property name="text">
+                        <string>Окружная скорость вращения
+круга, мм/мин / vk</string>
+                       </property>
+                      </widget>
+                     </item>
+                     <item row="0" column="1">
+                      <widget class="QLineEdit" name="lineEdit_24"/>
+                     </item>
+                     <item row="1" column="0">
+                      <widget class="QLabel" name="label_27">
+                       <property name="text">
+                        <string>Окружная скорость вращения
+круга, мм/мин / vk</string>
+                       </property>
+                      </widget>
+                     </item>
+                     <item row="1" column="1">
+                      <widget class="QLineEdit" name="lineEdit_28"/>
+                     </item>
+                     <item row="3" column="0">
+                      <widget class="QLabel" name="label_28">
+                       <property name="text">
+                        <string>Частота вращения детали, об/мин / nd</string>
+                       </property>
+                      </widget>
+                     </item>
+                     <item row="3" column="1">
+                      <widget class="QLineEdit" name="lineEdit_29"/>
+                     </item>
+                     <item row="4" column="0">
+                      <widget class="QLabel" name="label_32">
+                       <property name="text">
+                        <string>Поддатливость технологической 
+системы, мм/кг / podatl</string>
+                       </property>
+                      </widget>
+                     </item>
+                     <item row="4" column="1">
+                      <widget class="QLineEdit" name="lineEdit_30"/>
+                     </item>
+                    </layout>
+                   </widget>
+                  </item>
+                  <item row="1" column="1">
+                   <widget class="QWidget" name="widget_5" native="true">
+                    <layout class="QFormLayout" name="formLayout_2">
+                     <property name="horizontalSpacing">
+                      <number>11</number>
+                     </property>
+                     <property name="verticalSpacing">
+                      <number>11</number>
+                     </property>
+                     <property name="leftMargin">
+                      <number>11</number>
+                     </property>
+                     <property name="topMargin">
+                      <number>11</number>
+                     </property>
+                     <property name="rightMargin">
+                      <number>0</number>
+                     </property>
+                     <property name="bottomMargin">
+                      <number>11</number>
+                     </property>
+                     <item row="0" column="0">
+                      <widget class="QLabel" name="label_9">
+                       <property name="text">
+                        <string>Активная ширина круга, мм / acw</string>
+                       </property>
+                      </widget>
+                     </item>
+                     <item row="1" column="0">
+                      <widget class="QLabel" name="label_10">
+                       <property name="text">
+                        <string>Скорость круга, м/с / V(k)</string>
+                       </property>
+                      </widget>
+                     </item>
+                     <item row="3" column="0">
+                      <widget class="QLabel" name="label_12">
+                       <property name="text">
+                        <string>Диаметр круга, мм / dk</string>
+                       </property>
+                      </widget>
+                     </item>
+                     <item row="4" column="0">
+                      <widget class="QLabel" name="label_13">
+                       <property name="text">
+                        <string>Степень затупления круга, мм / stzat</string>
+                       </property>
+                      </widget>
+                     </item>
+                     <item row="5" column="0">
+                      <widget class="QLabel" name="label_14">
+                       <property name="text">
+                        <string>Высота круга, мм / hgtc</string>
+                       </property>
+                      </widget>
+                     </item>
+                     <item row="6" column="0">
+                      <widget class="QLabel" name="label_15">
+                       <property name="text">
+                        <string>Коэффициент геометрии зерен / coefgg</string>
+                       </property>
+                      </widget>
+                     </item>
+                     <item row="0" column="1">
+                      <widget class="QLineEdit" name="lineEdit_6"/>
+                     </item>
+                     <item row="1" column="1">
+                      <widget class="QLineEdit" name="lineEdit_7"/>
+                     </item>
+                     <item row="2" column="1">
+                      <widget class="QLineEdit" name="lineEdit_8"/>
+                     </item>
+                     <item row="3" column="1">
+                      <widget class="QLineEdit" name="lineEdit_9"/>
+                     </item>
+                     <item row="4" column="1">
+                      <widget class="QLineEdit" name="lineEdit_10"/>
+                     </item>
+                     <item row="5" column="1">
+                      <widget class="QLineEdit" name="lineEdit_11"/>
+                     </item>
+                     <item row="6" column="1">
+                      <widget class="QLineEdit" name="lineEdit_12"/>
+                     </item>
+                     <item row="2" column="0">
+                      <widget class="QLabel" name="label_11">
+                       <property name="text">
+                        <string>Мощность привода круга, кВт / dr_pow</string>
+                       </property>
+                      </widget>
+                     </item>
+                    </layout>
+                   </widget>
+                  </item>
+                  <item row="1" column="2">
+                   <widget class="QWidget" name="widget" native="true">
+                    <property name="enabled">
+                     <bool>true</bool>
+                    </property>
+                    <layout class="QFormLayout" name="formLayout_3">
+                     <property name="horizontalSpacing">
+                      <number>11</number>
+                     </property>
+                     <property name="verticalSpacing">
+                      <number>11</number>
+                     </property>
+                     <property name="leftMargin">
+                      <number>11</number>
+                     </property>
+                     <property name="rightMargin">
+                      <number>0</number>
+                     </property>
+                     <property name="bottomMargin">
+                      <number>11</number>
+                     </property>
+                     <item row="0" column="0">
+                      <widget class="QLabel" name="label_17">
+                       <property name="text">
+                        <string>Количество ступеней цикла / zmax</string>
+                       </property>
+                      </widget>
+                     </item>
+                     <item row="1" column="0">
+                      <widget class="QLabel" name="label_18">
+                       <property name="text">
+                        <string>Программная минутная подача на 
+ступенях цикла, мм/мин / sp</string>
+                       </property>
+                      </widget>
+                     </item>
+                     <item row="2" column="0">
+                      <widget class="QLabel" name="label_19">
+                       <property name="text">
+                        <string>Коэффициент припуска / kz</string>
+                       </property>
+                      </widget>
+                     </item>
+                     <item row="3" column="0">
+                      <widget class="QLabel" name="label_20">
+                       <property name="text">
+                        <string>Время одного оборота заготовки, 
+мин / time_ob</string>
+                       </property>
+                      </widget>
+                     </item>
+                     <item row="4" column="0">
+                      <widget class="QLabel" name="label_21">
+                       <property name="text">
+                        <string>Программная минутная подача на оборот
+ступенях цикла, мм/мин / tp_ob</string>
+                       </property>
+                      </widget>
+                     </item>
+                     <item row="0" column="1">
+                      <widget class="QLineEdit" name="lineEdit_13"/>
+                     </item>
+                     <item row="1" column="1">
+                      <widget class="QLineEdit" name="lineEdit_14"/>
+                     </item>
+                     <item row="2" column="1">
+                      <widget class="QLineEdit" name="lineEdit_15"/>
+                     </item>
+                     <item row="3" column="1">
+                      <widget class="QLineEdit" name="lineEdit_16"/>
+                     </item>
+                     <item row="4" column="1">
+                      <widget class="QLineEdit" name="lineEdit_17">
+                       <property name="enabled">
+                        <bool>true</bool>
+                       </property>
+                      </widget>
+                     </item>
+                    </layout>
+                   </widget>
+                  </item>
+                  <item row="0" column="2">
+                   <widget class="QLabel" name="label_16">
+                    <property name="font">
+                     <font>
+                      <pointsize>9</pointsize>
+                      <weight>75</weight>
+                      <bold>true</bold>
+                     </font>
+                    </property>
+                    <property name="text">
+                     <string>Ввод данных по циклу</string>
+                    </property>
+                   </widget>
+                  </item>
+                  <item row="2" column="0">
+                   <widget class="QLabel" name="label_33">
+                    <property name="font">
+                     <font>
+                      <pointsize>9</pointsize>
+                      <weight>75</weight>
+                      <bold>true</bold>
+                     </font>
+                    </property>
+                    <property name="text">
+                     <string>Ввод данных по детали</string>
+                    </property>
+                   </widget>
+                  </item>
+                  <item row="2" column="1">
+                   <widget class="QLabel" name="label_34">
+                    <property name="font">
+                     <font>
+                      <pointsize>9</pointsize>
+                      <weight>75</weight>
+                      <bold>true</bold>
+                     </font>
+                    </property>
+                    <property name="text">
+                     <string>Ввод данных по станку</string>
+                    </property>
+                   </widget>
+                  </item>
+                  <item row="0" column="0">
                    <widget class="QLabel" name="label">
+                    <property name="font">
+                     <font>
+                      <pointsize>9</pointsize>
+                      <weight>75</weight>
+                      <bold>true</bold>
+                     </font>
+                    </property>
                     <property name="text">
                      <string>Ввод данных по заготовке</string>
                     </property>
                    </widget>
                   </item>
-                  <item>
-                   <widget class="QWidget" name="widget_4" native="true">
-                    <layout class="QFormLayout" name="formLayout">
-                     <item row="0" column="0">
-                      <widget class="QLabel" name="label_2">
-                       <property name="text">
-                        <string>TextLabel</string>
-                       </property>
-                      </widget>
-                     </item>
+                  <item row="0" column="1">
+                   <widget class="QLabel" name="label_8">
+                    <property name="font">
+                     <font>
+                      <pointsize>9</pointsize>
+                      <weight>75</weight>
+                      <bold>true</bold>
+                     </font>
+                    </property>
+                    <property name="text">
+                     <string>Ввод данных по шлифовальному кругу</string>
+                    </property>
+                   </widget>
+                  </item>
+                  <item row="3" column="2">
+                   <widget class="QWidget" name="widget_7" native="true">
+                    <layout class="QFormLayout" name="formLayout_6">
                      <item row="0" column="1">
-                      <widget class="QTextEdit" name="textEdit"/>
-                     </item>
-                     <item row="1" column="0">
-                      <widget class="QLabel" name="label_3">
+                      <widget class="QPushButton" name="add_grafs">
+                       <property name="baseSize">
+                        <size>
+                         <width>0</width>
+                         <height>0</height>
+                        </size>
+                       </property>
                        <property name="text">
-                        <string>TextLabel</string>
+                        <string>Сохранить</string>
+                       </property>
+                       <property name="autoDefault">
+                        <bool>false</bool>
                        </property>
                       </widget>
                      </item>
-                     <item row="1" column="1">
-                      <widget class="QLineEdit" name="lineEdit"/>
+                     <item row="2" column="1">
+                      <widget class="QPushButton" name="pushButton_2">
+                       <property name="text">
+                        <string>Экспорт</string>
+                       </property>
+                      </widget>
+                     </item>
+                     <item row="3" column="1">
+                      <widget class="QPushButton" name="pushButton">
+                       <property name="layoutDirection">
+                        <enum>Qt::LeftToRight</enum>
+                       </property>
+                       <property name="text">
+                        <string>Импорт</string>
+                       </property>
+                      </widget>
                      </item>
                     </layout>
                    </widget>
                   </item>
                  </layout>
                 </widget>
-               </item>
-               <item row="0" column="1">
-                <widget class="QWidget" name="widget_3" native="true"/>
                </item>
               </layout>
              </widget>
@@ -110,7 +620,7 @@
           </widget>
           <widget class="QWidget" name="graf_2">
            <attribute name="title">
-            <string>Tab 2</string>
+            <string>График 2</string>
            </attribute>
            <layout class="QVBoxLayout" name="verticalLayout_2">
             <item>
@@ -127,7 +637,6 @@
    </layout>
    <zorder>MainTabWidget</zorder>
    <zorder>l_grafs</zorder>
-   <zorder>add_grafs</zorder>
   </widget>
  </widget>
  <resources/>
