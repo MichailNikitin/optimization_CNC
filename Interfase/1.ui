@@ -7,7 +7,7 @@
     <x>0</x>
     <y>0</y>
     <width>1209</width>
-    <height>781</height>
+    <height>801</height>
    </rect>
   </property>
   <property name="sizePolicy">
@@ -191,9 +191,9 @@
                     </property>
                     <layout class="QVBoxLayout" name="verticalLayout_4">
                      <item>
-                      <layout class="QVBoxLayout" name="verticalLayout_3">
+                      <layout class="QVBoxLayout" name="save_export_import_verticalLayout">
                        <item>
-                        <widget class="QPushButton" name="pushButton">
+                        <widget class="QPushButton" name="save_param_pushButton">
                          <property name="sizePolicy">
                           <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
                            <horstretch>0</horstretch>
@@ -226,9 +226,9 @@
                         </widget>
                        </item>
                        <item>
-                        <layout class="QHBoxLayout" name="horizontalLayout">
+                        <layout class="QHBoxLayout" name="_export_import_horizontalLayout">
                          <item>
-                          <widget class="QPushButton" name="pushButton_2">
+                          <widget class="QPushButton" name="export_pushButton_2">
                            <property name="sizePolicy">
                             <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
                              <horstretch>0</horstretch>
@@ -259,7 +259,7 @@
                           </widget>
                          </item>
                          <item>
-                          <widget class="QPushButton" name="pushButton_3">
+                          <widget class="QPushButton" name="import_param_pushButton_3">
                            <property name="sizePolicy">
                             <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
                              <horstretch>0</horstretch>
@@ -350,6 +350,12 @@
                   </item>
                   <item row="4" column="1">
                    <widget class="QLineEdit" name="stzat_textbox">
+                    <property name="minimumSize">
+                     <size>
+                      <width>0</width>
+                      <height>29</height>
+                     </size>
+                    </property>
                     <property name="styleSheet">
                      <string notr="true">QLineEdit
 {
@@ -379,6 +385,12 @@
                       <horstretch>0</horstretch>
                       <verstretch>0</verstretch>
                      </sizepolicy>
+                    </property>
+                    <property name="minimumSize">
+                     <size>
+                      <width>0</width>
+                      <height>29</height>
+                     </size>
                     </property>
                     <property name="styleSheet">
                      <string notr="true">QLineEdit
@@ -415,6 +427,12 @@
                   </item>
                   <item row="0" column="1">
                    <widget class="QLineEdit" name="acw_textbox">
+                    <property name="minimumSize">
+                     <size>
+                      <width>0</width>
+                      <height>29</height>
+                     </size>
+                    </property>
                     <property name="styleSheet">
                      <string notr="true">QLineEdit
 {
@@ -462,6 +480,12 @@
                   </item>
                   <item row="1" column="1">
                    <widget class="QLineEdit" name="sk_textbox">
+                    <property name="minimumSize">
+                     <size>
+                      <width>0</width>
+                      <height>29</height>
+                     </size>
+                    </property>
                     <property name="styleSheet">
                      <string notr="true">QLineEdit
 {
@@ -473,6 +497,12 @@
                   </item>
                   <item row="5" column="1">
                    <widget class="QLineEdit" name="hgtc_textbox">
+                    <property name="minimumSize">
+                     <size>
+                      <width>0</width>
+                      <height>29</height>
+                     </size>
+                    </property>
                     <property name="styleSheet">
                      <string notr="true">QLineEdit
 {
@@ -484,6 +514,12 @@
                   </item>
                   <item row="3" column="1">
                    <widget class="QLineEdit" name="dk_textbox">
+                    <property name="minimumSize">
+                     <size>
+                      <width>0</width>
+                      <height>29</height>
+                     </size>
+                    </property>
                     <property name="styleSheet">
                      <string notr="true">QLineEdit
 {
@@ -496,6 +532,12 @@
                   </item>
                   <item row="2" column="1">
                    <widget class="QLineEdit" name="dr_pow_textbox">
+                    <property name="minimumSize">
+                     <size>
+                      <width>0</width>
+                      <height>29</height>
+                     </size>
+                    </property>
                     <property name="styleSheet">
                      <string notr="true">QLineEdit
 {
@@ -584,6 +626,12 @@
                   </item>
                   <item row="1" column="1">
                    <widget class="QLineEdit" name="sp_textbox">
+                    <property name="minimumSize">
+                     <size>
+                      <width>0</width>
+                      <height>29</height>
+                     </size>
+                    </property>
                     <property name="styleSheet">
                      <string notr="true">QLineEdit
 {
@@ -597,6 +645,12 @@
                    <widget class="QLineEdit" name="time_ob_textbox">
                     <property name="enabled">
                      <bool>false</bool>
+                    </property>
+                    <property name="minimumSize">
+                     <size>
+                      <width>0</width>
+                      <height>29</height>
+                     </size>
                     </property>
                     <property name="styleSheet">
                      <string notr="true"/>
@@ -621,6 +675,12 @@
                     <property name="enabled">
                      <bool>false</bool>
                     </property>
+                    <property name="minimumSize">
+                     <size>
+                      <width>0</width>
+                      <height>29</height>
+                     </size>
+                    </property>
                    </widget>
                   </item>
                   <item row="0" column="0">
@@ -637,6 +697,12 @@
                   </item>
                   <item row="2" column="1">
                    <widget class="QLineEdit" name="kz_textbox">
+                    <property name="minimumSize">
+                     <size>
+                      <width>0</width>
+                      <height>29</height>
+                     </size>
+                    </property>
                     <property name="styleSheet">
                      <string notr="true">QLineEdit
 {
@@ -673,6 +739,12 @@
                   </item>
                   <item row="0" column="1">
                    <widget class="QLineEdit" name="zmax_textbox">
+                    <property name="minimumSize">
+                     <size>
+                      <width>0</width>
+                      <height>29</height>
+                     </size>
+                    </property>
                     <property name="styleSheet">
                      <string notr="true">QLineEdit
 {
@@ -863,6 +935,12 @@
                   </item>
                   <item row="1" column="1">
                    <widget class="QLineEdit" name="B_textbox">
+                    <property name="minimumSize">
+                     <size>
+                      <width>0</width>
+                      <height>29</height>
+                     </size>
+                    </property>
                     <property name="styleSheet">
                      <string notr="true">QLineEdit
 {
@@ -886,6 +964,12 @@
                   </item>
                   <item row="2" column="1">
                    <widget class="QLineEdit" name="td_textbox">
+                    <property name="minimumSize">
+                     <size>
+                      <width>0</width>
+                      <height>29</height>
+                     </size>
+                    </property>
                     <property name="styleSheet">
                      <string notr="true">QLineEdit
 {
@@ -934,6 +1018,12 @@
                   </item>
                   <item row="3" column="1">
                    <widget class="QLineEdit" name="rgn_dd_textbox">
+                    <property name="minimumSize">
+                     <size>
+                      <width>0</width>
+                      <height>29</height>
+                     </size>
+                    </property>
                     <property name="styleSheet">
                      <string notr="true">QLineEdit
 {
@@ -945,6 +1035,12 @@
                   </item>
                   <item row="5" column="1">
                    <widget class="QLineEdit" name="sigma_textbox">
+                    <property name="minimumSize">
+                     <size>
+                      <width>0</width>
+                      <height>29</height>
+                     </size>
+                    </property>
                     <property name="styleSheet">
                      <string notr="true">QLineEdit
 {
@@ -981,6 +1077,12 @@
                   </item>
                   <item row="0" column="1">
                    <widget class="QLineEdit" name="dd_max_textbox">
+                    <property name="minimumSize">
+                     <size>
+                      <width>0</width>
+                      <height>29</height>
+                     </size>
+                    </property>
                     <property name="styleSheet">
                      <string notr="true">QLineEdit
 {
@@ -992,6 +1094,12 @@
                   </item>
                   <item row="4" column="1">
                    <widget class="QLineEdit" name="b_textbox">
+                    <property name="minimumSize">
+                     <size>
+                      <width>0</width>
+                      <height>29</height>
+                     </size>
+                    </property>
                     <property name="styleSheet">
                      <string notr="true">QLineEdit
 {
@@ -1005,6 +1113,12 @@
                    <widget class="QLineEdit" name="prsk_textbox">
                     <property name="enabled">
                      <bool>false</bool>
+                    </property>
+                    <property name="minimumSize">
+                     <size>
+                      <width>0</width>
+                      <height>29</height>
+                     </size>
                     </property>
                    </widget>
                   </item>
@@ -1043,6 +1157,12 @@
                   </property>
                   <item row="0" column="1">
                    <widget class="QLineEdit" name="vkst_textbox">
+                    <property name="minimumSize">
+                     <size>
+                      <width>0</width>
+                      <height>29</height>
+                     </size>
+                    </property>
                     <property name="styleSheet">
                      <string notr="true">QLineEdit
 {
@@ -1069,6 +1189,12 @@
                     <property name="enabled">
                      <bool>false</bool>
                     </property>
+                    <property name="minimumSize">
+                     <size>
+                      <width>0</width>
+                      <height>29</height>
+                     </size>
+                    </property>
                    </widget>
                   </item>
                   <item row="4" column="0">
@@ -1086,6 +1212,12 @@
                   </item>
                   <item row="2" column="1">
                    <widget class="QLineEdit" name="nd_textbox">
+                    <property name="minimumSize">
+                     <size>
+                      <width>0</width>
+                      <height>29</height>
+                     </size>
+                    </property>
                     <property name="styleSheet">
                      <string notr="true">QLineEdit
 {
@@ -1099,6 +1231,12 @@
                    <widget class="QLineEdit" name="podatl_textbox">
                     <property name="enabled">
                      <bool>false</bool>
+                    </property>
+                    <property name="minimumSize">
+                     <size>
+                      <width>0</width>
+                      <height>29</height>
+                     </size>
                     </property>
                    </widget>
                   </item>
@@ -1193,6 +1331,12 @@
                   </item>
                   <item row="3" column="1">
                    <widget class="QLineEdit" name="E_textbox">
+                    <property name="minimumSize">
+                     <size>
+                      <width>0</width>
+                      <height>29</height>
+                     </size>
+                    </property>
                     <property name="styleSheet">
                      <string notr="true">QLineEdit
 {
@@ -1275,7 +1419,13 @@
                    </widget>
                   </item>
                   <item row="2" column="1">
-                   <widget class="QLineEdit" name="gab_dz_textbox">
+                   <widget class="QLineEdit" name="gab_dlin_textbox">
+                    <property name="minimumSize">
+                     <size>
+                      <width>0</width>
+                      <height>29</height>
+                     </size>
+                    </property>
                     <property name="styleSheet">
                      <string notr="true">QLineEdit
 {
@@ -1287,6 +1437,12 @@
                   </item>
                   <item row="4" column="1">
                    <widget class="QLineEdit" name="sum_flz_textbox">
+                    <property name="minimumSize">
+                     <size>
+                      <width>0</width>
+                      <height>29</height>
+                     </size>
+                    </property>
                     <property name="styleSheet">
                      <string notr="true">QLineEdit
 {
@@ -1301,6 +1457,12 @@
                     <property name="enabled">
                      <bool>true</bool>
                     </property>
+                    <property name="minimumSize">
+                     <size>
+                      <width>0</width>
+                      <height>29</height>
+                     </size>
+                    </property>
                     <property name="styleSheet">
                      <string notr="true">QLineEdit
 {
@@ -1311,7 +1473,7 @@
                    </widget>
                   </item>
                   <item row="2" column="0">
-                   <widget class="QLabel" name="gab_dz_label">
+                   <widget class="QLabel" name="gab_dlin_label">
                     <property name="sizePolicy">
                      <sizepolicy hsizetype="Preferred" vsizetype="Fixed">
                       <horstretch>0</horstretch>
@@ -1330,6 +1492,12 @@
                   </item>
                   <item row="1" column="1">
                    <widget class="QLineEdit" name="tdz_textbox">
+                    <property name="minimumSize">
+                     <size>
+                      <width>0</width>
+                      <height>29</height>
+                     </size>
+                    </property>
                     <property name="styleSheet">
                      <string notr="true">QLineEdit
 {
