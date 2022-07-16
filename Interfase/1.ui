@@ -6,8 +6,8 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>1191</width>
-    <height>772</height>
+    <width>1209</width>
+    <height>781</height>
    </rect>
   </property>
   <property name="sizePolicy">
@@ -213,6 +213,13 @@
                            <bold>false</bold>
                           </font>
                          </property>
+                         <property name="styleSheet">
+                          <string notr="true">QPushButton
+{
+	border-radius: 9px;
+	background-color: rgb(187, 218, 255);
+}</string>
+                         </property>
                          <property name="text">
                           <string>Сохранить</string>
                          </property>
@@ -239,6 +246,13 @@
                              <pointsize>9</pointsize>
                             </font>
                            </property>
+                           <property name="styleSheet">
+                            <string notr="true">QPushButton
+{
+	border-radius: 7px;
+	background-color: rgb(187, 218, 255);
+}</string>
+                           </property>
                            <property name="text">
                             <string>Экспорт</string>
                            </property>
@@ -262,6 +276,13 @@
                             <font>
                              <pointsize>9</pointsize>
                             </font>
+                           </property>
+                           <property name="styleSheet">
+                            <string notr="true">QPushButton
+{
+	border-radius: 7px;
+	background-color: rgb(187, 218, 255);
+}</string>
                            </property>
                            <property name="text">
                             <string>Импорт</string>
@@ -328,7 +349,15 @@
                    </widget>
                   </item>
                   <item row="4" column="1">
-                   <widget class="QLineEdit" name="stzat_textbox"/>
+                   <widget class="QLineEdit" name="stzat_textbox">
+                    <property name="styleSheet">
+                     <string notr="true">QLineEdit
+{
+	border-radius: 4px;
+	background-color: rgb(206, 224, 255);
+}</string>
+                    </property>
+                   </widget>
                   </item>
                   <item row="7" column="0">
                    <spacer name="verticalSpacer_3">
@@ -344,7 +373,21 @@
                    </spacer>
                   </item>
                   <item row="6" column="1">
-                   <widget class="QLineEdit" name="coefgg_textbox"/>
+                   <widget class="QLineEdit" name="coefgg_textbox">
+                    <property name="sizePolicy">
+                     <sizepolicy hsizetype="Expanding" vsizetype="Fixed">
+                      <horstretch>0</horstretch>
+                      <verstretch>0</verstretch>
+                     </sizepolicy>
+                    </property>
+                    <property name="styleSheet">
+                     <string notr="true">QLineEdit
+{
+	border-radius: 4px;
+	background-color: rgb(206, 224, 255);
+}</string>
+                    </property>
+                   </widget>
                   </item>
                   <item row="4" column="0">
                    <widget class="QLabel" name="hgtc_label">
@@ -371,7 +414,15 @@
                    </widget>
                   </item>
                   <item row="0" column="1">
-                   <widget class="QLineEdit" name="acw_textbox"/>
+                   <widget class="QLineEdit" name="acw_textbox">
+                    <property name="styleSheet">
+                     <string notr="true">QLineEdit
+{
+	border-radius: 4px;
+	background-color: rgb(206, 224, 255);
+}</string>
+                    </property>
+                   </widget>
                   </item>
                   <item row="6" column="0">
                    <widget class="QLabel" name="coefgg_label">
@@ -410,16 +461,49 @@
                    </widget>
                   </item>
                   <item row="1" column="1">
-                   <widget class="QLineEdit" name="sk_textbox"/>
+                   <widget class="QLineEdit" name="sk_textbox">
+                    <property name="styleSheet">
+                     <string notr="true">QLineEdit
+{
+	border-radius: 4px;
+	background-color: rgb(206, 224, 255);
+}</string>
+                    </property>
+                   </widget>
                   </item>
                   <item row="5" column="1">
-                   <widget class="QLineEdit" name="hgtc_textbox"/>
+                   <widget class="QLineEdit" name="hgtc_textbox">
+                    <property name="styleSheet">
+                     <string notr="true">QLineEdit
+{
+	border-radius: 4px;
+	background-color: rgb(206, 224, 255);
+}</string>
+                    </property>
+                   </widget>
                   </item>
                   <item row="3" column="1">
-                   <widget class="QLineEdit" name="dk_textbox"/>
+                   <widget class="QLineEdit" name="dk_textbox">
+                    <property name="styleSheet">
+                     <string notr="true">QLineEdit
+{
+	border-radius: 4px;
+	background-color: rgb(206, 224, 255);
+}
+</string>
+                    </property>
+                   </widget>
                   </item>
                   <item row="2" column="1">
-                   <widget class="QLineEdit" name="dr_pow_textbox"/>
+                   <widget class="QLineEdit" name="dr_pow_textbox">
+                    <property name="styleSheet">
+                     <string notr="true">QLineEdit
+{
+	border-radius: 4px;
+	background-color: rgb(206, 224, 255);
+}</string>
+                    </property>
+                   </widget>
                   </item>
                   <item row="3" column="0">
                    <widget class="QLabel" name="stzat_label">
@@ -499,12 +583,23 @@
                    </widget>
                   </item>
                   <item row="1" column="1">
-                   <widget class="QLineEdit" name="sp_textbox"/>
+                   <widget class="QLineEdit" name="sp_textbox">
+                    <property name="styleSheet">
+                     <string notr="true">QLineEdit
+{
+	border-radius: 4px;
+	background-color: rgb(206, 224, 255);
+}</string>
+                    </property>
+                   </widget>
                   </item>
                   <item row="3" column="1">
                    <widget class="QLineEdit" name="time_ob_textbox">
                     <property name="enabled">
                      <bool>false</bool>
+                    </property>
+                    <property name="styleSheet">
+                     <string notr="true"/>
                     </property>
                    </widget>
                   </item>
@@ -541,7 +636,15 @@
                    </widget>
                   </item>
                   <item row="2" column="1">
-                   <widget class="QLineEdit" name="kz_textbox"/>
+                   <widget class="QLineEdit" name="kz_textbox">
+                    <property name="styleSheet">
+                     <string notr="true">QLineEdit
+{
+	border-radius: 4px;
+	background-color: rgb(206, 224, 255);
+}</string>
+                    </property>
+                   </widget>
                   </item>
                   <item row="5" column="0">
                    <spacer name="verticalSpacer_5">
@@ -569,7 +672,15 @@
                    </widget>
                   </item>
                   <item row="0" column="1">
-                   <widget class="QLineEdit" name="zmax_textbox"/>
+                   <widget class="QLineEdit" name="zmax_textbox">
+                    <property name="styleSheet">
+                     <string notr="true">QLineEdit
+{
+	border-radius: 4px;
+	background-color: rgb(206, 224, 255);
+}</string>
+                    </property>
+                   </widget>
                   </item>
                  </layout>
                 </widget>
@@ -751,7 +862,15 @@
                    </widget>
                   </item>
                   <item row="1" column="1">
-                   <widget class="QLineEdit" name="B_textbox"/>
+                   <widget class="QLineEdit" name="B_textbox">
+                    <property name="styleSheet">
+                     <string notr="true">QLineEdit
+{
+	border-radius: 4px;
+	background-color: rgb(206, 224, 255);
+}</string>
+                    </property>
+                   </widget>
                   </item>
                   <item row="1" column="0">
                    <widget class="QLabel" name="B_label">
@@ -766,7 +885,15 @@
                    </widget>
                   </item>
                   <item row="2" column="1">
-                   <widget class="QLineEdit" name="td_textbox"/>
+                   <widget class="QLineEdit" name="td_textbox">
+                    <property name="styleSheet">
+                     <string notr="true">QLineEdit
+{
+	border-radius: 4px;
+	background-color: rgb(206, 224, 255);
+}</string>
+                    </property>
+                   </widget>
                   </item>
                   <item row="7" column="0">
                    <spacer name="verticalSpacer_4">
@@ -806,10 +933,26 @@
                    </widget>
                   </item>
                   <item row="3" column="1">
-                   <widget class="QLineEdit" name="rgn_dd_textbox"/>
+                   <widget class="QLineEdit" name="rgn_dd_textbox">
+                    <property name="styleSheet">
+                     <string notr="true">QLineEdit
+{
+	border-radius: 4px;
+	background-color: rgb(206, 224, 255);
+}</string>
+                    </property>
+                   </widget>
                   </item>
                   <item row="5" column="1">
-                   <widget class="QLineEdit" name="sigma_textbox"/>
+                   <widget class="QLineEdit" name="sigma_textbox">
+                    <property name="styleSheet">
+                     <string notr="true">QLineEdit
+{
+	border-radius: 4px;
+	background-color: rgb(206, 224, 255);
+}</string>
+                    </property>
+                   </widget>
                   </item>
                   <item row="5" column="0">
                    <widget class="QLabel" name="sigma_label">
@@ -837,10 +980,26 @@
                    </widget>
                   </item>
                   <item row="0" column="1">
-                   <widget class="QLineEdit" name="dd_max_textbox"/>
+                   <widget class="QLineEdit" name="dd_max_textbox">
+                    <property name="styleSheet">
+                     <string notr="true">QLineEdit
+{
+	border-radius: 4px;
+	background-color: rgb(206, 224, 255);
+}</string>
+                    </property>
+                   </widget>
                   </item>
                   <item row="4" column="1">
-                   <widget class="QLineEdit" name="b_textbox"/>
+                   <widget class="QLineEdit" name="b_textbox">
+                    <property name="styleSheet">
+                     <string notr="true">QLineEdit
+{
+	border-radius: 4px;
+	background-color: rgb(206, 224, 255);
+}</string>
+                    </property>
+                   </widget>
                   </item>
                   <item row="6" column="1">
                    <widget class="QLineEdit" name="prsk_textbox">
@@ -883,7 +1042,15 @@
                    <number>11</number>
                   </property>
                   <item row="0" column="1">
-                   <widget class="QLineEdit" name="vkst_textbox"/>
+                   <widget class="QLineEdit" name="vkst_textbox">
+                    <property name="styleSheet">
+                     <string notr="true">QLineEdit
+{
+	border-radius: 4px;
+	background-color: rgb(206, 224, 255);
+}</string>
+                    </property>
+                   </widget>
                   </item>
                   <item row="2" column="0">
                    <widget class="QLabel" name="nd_label">
@@ -918,7 +1085,15 @@
                    </spacer>
                   </item>
                   <item row="2" column="1">
-                   <widget class="QLineEdit" name="nd_textbox"/>
+                   <widget class="QLineEdit" name="nd_textbox">
+                    <property name="styleSheet">
+                     <string notr="true">QLineEdit
+{
+	border-radius: 4px;
+	background-color: rgb(206, 224, 255);
+}</string>
+                    </property>
+                   </widget>
                   </item>
                   <item row="3" column="1">
                    <widget class="QLineEdit" name="podatl_textbox">
@@ -1017,7 +1192,15 @@
                    </spacer>
                   </item>
                   <item row="3" column="1">
-                   <widget class="QLineEdit" name="E_textbox"/>
+                   <widget class="QLineEdit" name="E_textbox">
+                    <property name="styleSheet">
+                     <string notr="true">QLineEdit
+{
+	border-radius: 4px;
+	background-color: rgb(206, 224, 255);
+}</string>
+                    </property>
+                   </widget>
                   </item>
                   <item row="3" column="0">
                    <widget class="QLabel" name="E_label">
@@ -1092,15 +1275,38 @@
                    </widget>
                   </item>
                   <item row="2" column="1">
-                   <widget class="QLineEdit" name="gab_dz_textbox"/>
+                   <widget class="QLineEdit" name="gab_dz_textbox">
+                    <property name="styleSheet">
+                     <string notr="true">QLineEdit
+{
+	border-radius: 4px;
+	background-color: rgb(206, 224, 255);
+}</string>
+                    </property>
+                   </widget>
                   </item>
                   <item row="4" column="1">
-                   <widget class="QLineEdit" name="sum_flz_textbox"/>
+                   <widget class="QLineEdit" name="sum_flz_textbox">
+                    <property name="styleSheet">
+                     <string notr="true">QLineEdit
+{
+	border-radius: 4px;
+	background-color: rgb(206, 224, 255);
+}</string>
+                    </property>
+                   </widget>
                   </item>
                   <item row="0" column="1">
                    <widget class="QLineEdit" name="dz_max_textbox">
                     <property name="enabled">
                      <bool>true</bool>
+                    </property>
+                    <property name="styleSheet">
+                     <string notr="true">QLineEdit
+{
+	border-radius: 4px;
+	background-color: rgb(206, 224, 255);
+}</string>
                     </property>
                    </widget>
                   </item>
@@ -1123,7 +1329,15 @@
                    </widget>
                   </item>
                   <item row="1" column="1">
-                   <widget class="QLineEdit" name="tdz_textbox"/>
+                   <widget class="QLineEdit" name="tdz_textbox">
+                    <property name="styleSheet">
+                     <string notr="true">QLineEdit
+{
+	border-radius: 4px;
+	background-color: rgb(206, 224, 255);
+}</string>
+                    </property>
+                   </widget>
                   </item>
                  </layout>
                 </widget>
