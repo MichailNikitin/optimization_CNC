@@ -6,8 +6,8 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>1068</width>
-    <height>716</height>
+    <width>1208</width>
+    <height>726</height>
    </rect>
   </property>
   <property name="windowTitle">
@@ -91,7 +91,7 @@
           <bool>false</bool>
          </property>
          <property name="text">
-          <string>Импортировать график</string>
+          <string>Создать график</string>
          </property>
         </widget>
        </item>
@@ -111,7 +111,7 @@
           </font>
          </property>
          <property name="text">
-          <string>Создать новый</string>
+          <string>Импортировать</string>
          </property>
         </widget>
        </item>
@@ -133,17 +133,6 @@
     </item>
    </layout>
   </widget>
-  <widget class="QMenuBar" name="menubar">
-   <property name="geometry">
-    <rect>
-     <x>0</x>
-     <y>0</y>
-     <width>1068</width>
-     <height>21</height>
-    </rect>
-   </property>
-  </widget>
-  <widget class="QStatusBar" name="statusbar"/>
  </widget>
  <resources/>
  <connections/>
