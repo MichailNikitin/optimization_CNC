@@ -37,7 +37,7 @@
      <number>7</number>
     </property>
     <item row="4" column="1">
-     <widget class="QPushButton" name="pushButton_2">
+     <widget class="QPushButton" name="import_2">
       <property name="sizePolicy">
        <sizepolicy hsizetype="Expanding" vsizetype="Maximum">
         <horstretch>0</horstretch>
@@ -69,7 +69,7 @@
      </widget>
     </item>
     <item row="0" column="1">
-     <spacer name="verticalSpacer_2">
+     <spacer name="indent_Above">
       <property name="orientation">
        <enum>Qt::Vertical</enum>
       </property>
@@ -85,7 +85,7 @@
      </spacer>
     </item>
     <item row="3" column="1">
-     <widget class="QPushButton" name="pushButton">
+     <widget class="QPushButton" name="create_new_graph">
       <property name="sizePolicy">
        <sizepolicy hsizetype="Expanding" vsizetype="Maximum">
         <horstretch>0</horstretch>
@@ -117,7 +117,7 @@
      </widget>
     </item>
     <item row="5" column="1">
-     <spacer name="verticalSpacer">
+     <spacer name="indent_Below">
       <property name="orientation">
        <enum>Qt::Vertical</enum>
       </property>
@@ -133,7 +133,7 @@
      </spacer>
     </item>
     <item row="3" column="2">
-     <spacer name="horizontalSpacer">
+     <spacer name="indent_Right">
       <property name="orientation">
        <enum>Qt::Horizontal</enum>
       </property>
@@ -149,7 +149,7 @@
      </spacer>
     </item>
     <item row="4" column="0">
-     <spacer name="horizontalSpacer_2">
+     <spacer name="indent_Left">
       <property name="orientation">
        <enum>Qt::Horizontal</enum>
       </property>

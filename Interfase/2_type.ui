@@ -37,7 +37,7 @@
      <number>0</number>
     </property>
     <item>
-     <widget class="Line" name="line_3">
+     <widget class="Line" name="line_1">
       <property name="orientation">
        <enum>Qt::Horizontal</enum>
       </property>
@@ -141,7 +141,7 @@
         </widget>
        </item>
        <item row="8" column="0" colspan="2">
-        <widget class="QWidget" name="widget_2" native="true">
+        <widget class="QWidget" name="field_add_a_step" native="true">
          <property name="sizePolicy">
           <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
            <horstretch>0</horstretch>
@@ -165,7 +165,7 @@
            <number>24</number>
           </property>
           <item row="0" column="0">
-           <widget class="QPushButton" name="add_stup_pushButton">
+           <widget class="QPushButton" name="add_step_pushButton">
             <property name="sizePolicy">
              <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
               <horstretch>0</horstretch>
@@ -190,7 +190,7 @@
            </widget>
           </item>
           <item row="0" column="1">
-           <widget class="QPushButton" name="delete_stup_pushButton">
+           <widget class="QPushButton" name="delete_step_pushButton">
             <property name="sizePolicy">
              <sizepolicy hsizetype="Expanding" vsizetype="Expanding">
               <horstretch>0</horstretch>
@@ -208,7 +208,7 @@
            </widget>
           </item>
           <item row="0" column="2">
-           <spacer name="horizontalSpacer">
+           <spacer name="indent_Left_add_a_step">
             <property name="orientation">
              <enum>Qt::Horizontal</enum>
             </property>
@@ -226,24 +226,8 @@
          </layout>
         </widget>
        </item>
-       <item row="9" column="0">
-        <spacer name="verticalSpacer_2">
-         <property name="orientation">
-          <enum>Qt::Vertical</enum>
-         </property>
-         <property name="sizeType">
-          <enum>QSizePolicy::Expanding</enum>
-         </property>
-         <property name="sizeHint" stdset="0">
-          <size>
-           <width>20</width>
-           <height>40</height>
-          </size>
-         </property>
-        </spacer>
-       </item>
        <item row="3" column="0" rowspan="5" colspan="3">
-        <widget class="QScrollArea" name="scrollArea">
+        <widget class="QScrollArea" name="data_entry_field">
          <property name="sizePolicy">
           <sizepolicy hsizetype="Expanding" vsizetype="Expanding">
            <horstretch>0</horstretch>
@@ -265,7 +249,7 @@
          <property name="widgetResizable">
           <bool>true</bool>
          </property>
-         <widget class="QWidget" name="type_z_scrollArea">
+         <widget class="QWidget" name="type_z_data_entry_field">
           <property name="geometry">
            <rect>
             <x>0</x>
@@ -381,6 +365,7 @@
             <widget class="Line" name="line">
              <property name="font">
               <font>
+               <pointsize>8</pointsize>
                <underline>false</underline>
                <strikeout>false</strikeout>
               </font>
@@ -484,7 +469,7 @@
          </property>
          <layout class="QGridLayout" name="gridLayout_4">
           <item row="1" column="0">
-           <spacer name="horizontalSpacer_2">
+           <spacer name="indent_LeftG">
             <property name="orientation">
              <enum>Qt::Horizontal</enum>
             </property>
@@ -500,7 +485,7 @@
            </spacer>
           </item>
           <item row="2" column="1">
-           <spacer name="verticalSpacer_3">
+           <spacer name="indent_BelowG">
             <property name="orientation">
              <enum>Qt::Vertical</enum>
             </property>
@@ -516,7 +501,7 @@
            </spacer>
           </item>
           <item row="1" column="2">
-           <spacer name="horizontalSpacer_3">
+           <spacer name="indent_RightG">
             <property name="orientation">
              <enum>Qt::Horizontal</enum>
             </property>
@@ -532,7 +517,7 @@
            </spacer>
           </item>
           <item row="0" column="1">
-           <spacer name="verticalSpacer">
+           <spacer name="indent_AboveG">
             <property name="orientation">
              <enum>Qt::Vertical</enum>
             </property>
@@ -562,6 +547,22 @@
           </item>
          </layout>
         </widget>
+       </item>
+       <item row="9" column="0" rowspan="2">
+        <spacer name="indent_Below_add_a_step">
+         <property name="orientation">
+          <enum>Qt::Vertical</enum>
+         </property>
+         <property name="sizeType">
+          <enum>QSizePolicy::Expanding</enum>
+         </property>
+         <property name="sizeHint" stdset="0">
+          <size>
+           <width>20</width>
+           <height>40</height>
+          </size>
+         </property>
+        </spacer>
        </item>
       </layout>
      </widget>
