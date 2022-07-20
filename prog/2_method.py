@@ -1,6 +1,4 @@
 import math as m
-import pandas as pd
-import threading
 import openpyxl
 
 M_PI = 3.14159265358979323846
@@ -50,12 +48,14 @@ def main():
     с1_tf_ob = 0.5 * podatl * k4 / (1. + k3 * podatl)  # коэф в формуле tf_ob
     print(f"k3={k3}   k4={k4}  с1_tf_ob ={с1_tf_ob}")
     print("Закончен ввод данных")
-    data_grafik = "datagrafiks2.xls"  # имя файла где будут записаны данные для графиков
-    f = openpyxl.load_workbook(data_grafik)
+    data_grafik = "datagrafiks2.xlsx"  # имя файла где будут записаны данные для графиков
+    f = openpyxl.Workbook()
+    f.create_sheet(title='Первый лист', index=0)
+    sheet = f["Первый лист"]
     column_names = ["z", "nsum", "sp[z]", "tp_ob[z]", "tp_sum", "tf_ob", "tf_sum", "sf", "py", "ypr_def", "ddo", "dpak[z]", "time_cicle", "tf_sum_i_1"]
     row = 1
     for i in range(1, 15):
-        f.cell(row = row, column = i, value = column_names[i+1])
+        sheet.cell(row = row, column = i, value = column_names[i-1])
     row += 1
     print("METKA1+++++++++=====Начало расчета цикла==+++++++++++++++")
     print("Задаем стартовые значения переменным")
@@ -66,21 +66,21 @@ def main():
     ypr_def = 0
     sf = 0.0  # Обнуляем фактическую минутную подачу
     tf_ob = 0.0  # Обнуляем фактическую подачу за оборот
-    time_cicle = 0  # Обнуляем время цикла
+    #одинаково поэтому пока так time_cicle = 0.0  # Обнуляем время цикла
     z = 0  # первая ступень цикла z = 0 имеет индекс 0
     #Обнуляем накопленные подачи
     tp_sum = 0.0  # Обнуляем суммарную программную подачу при nsum = 0, мм
     tf_sum = 0.0  # Обнуляем суммарную фактическую подачу при nsum = 0, мм
     tf_sum_i_1 = 0.0
-    f.cell(row = row, column = 1, value = z);f.cell(row = row, column = 1, value = nsum)
-    f.cell(row=row, column=1, value=sp[z]);f.cell(row=row, column=1, value=tp_ob[z])
-    f.cell(row=row, column=1, value=tp_sum);f.cell(row=row, column=1, value=tf_ob)
-    f.cell(row=row, column=1, value=tf_sum);f.cell(row=row, column=1, value=sf)
-    f.cell(row=row, column=1, value=py);f.cell(row=row, column=1, value=ypr_def)
-    f.cell(row=row, column=1, value=ddo);f.cell(row=row, column=1, value=dpak[z])
-    f.cell(row=row, column=1, value=time_cicle);f.cell(row=row, column=1, value=tf_sum_i_1)
+    sheet.cell(row=row, column=1, value=z);sheet.cell(row=row, column=2, value=nsum)
+    sheet.cell(row=row, column=3, value=sp[z]);sheet.cell(row=row, column=4, value=tp_ob[z])
+    sheet.cell(row=row, column=5, value=tp_sum);sheet.cell(row=row, column=6, value=tf_ob)
+    sheet.cell(row=row, column=7, value=tf_sum);sheet.cell(row=row, column=8, value=sf)
+    sheet.cell(row=row, column=9, value=py);sheet.cell(row=row, column=10, value=ypr_def)
+    sheet.cell(row=row, column=11, value=ddo);sheet.cell(row=row, column=12, value=dpak[z])
+    sheet.cell(row=row, column=13, value=time_cicle);sheet.cell(row=row, column=14, value=tf_sum_i_1)
     print("Начинаем расчет цикла шлифования ===========%%%%%%%%%%%%%%%%%%%%%%%%%")
-    while(z < zmax):
+    for z in range(zmax):
         while(ddo > dpak[z]):
             nsum = nsum + 1
             tp_sum = tp_sum + tp_ob[z]  # считаем текущее значение накопленной программной подачи на каждом радиусе
@@ -98,16 +98,17 @@ def main():
             print(f"tf_ob={tf_ob}  sf={sf}  py={py}  ypr_def={ypr_def}")
             print(f"tp_sum={tp_sum}  tf_sum={tf_sum}  tf_sum_i_1={tf_sum_i_1}")
             print(f"ddo={ddo}  dpak[z]={dpak[z]}  time_cicle={time_cicle}")
-            f.cell(row=row, column=1, value=z);f.cell(row=row, column=1, value=nsum)
-            f.cell(row=row, column=1, value=sp[z]);f.cell(row=row, column=1, value=tp_ob[z])
-            f.cell(row=row, column=1, value=tp_sum);f.cell(row=row, column=1, value=tf_ob)
-            f.cell(row=row, column=1, value=tf_sum);f.cell(row=row, column=1, value=sf)
-            f.cell(row=row, column=1, value=py);f.cell(row=row, column=1, value=ypr_def)
-            f.cell(row=row, column=1, value=ddo);f.cell(row=row, column=1, value=dpak[z])
-            f.cell(row=row, column=1, value=time_cicle);f.cell(row=row, column=1, value=tf_sum_i_1)
+            sheet.cell(row=row, column=1, value=z);sheet.cell(row=row, column=2, value=nsum)
+            sheet.cell(row=row, column=3, value=sp[z]);sheet.cell(row=row, column=4, value=tp_ob[z])
+            sheet.cell(row=row, column=5, value=tp_sum);sheet.cell(row=row, column=6, value=tf_ob)
+            sheet.cell(row=row, column=7, value=tf_sum);sheet.cell(row=row, column=8, value=sf)
+            sheet.cell(row=row, column=9, value=py);sheet.cell(row=row, column=10, value=ypr_def)
+            sheet.cell(row=row, column=11, value=ddo);sheet.cell(row=row, column=12, value=dpak[z])
+            sheet.cell(row=row, column=13, value=time_cicle);sheet.cell(row=row, column=14, value=tf_sum_i_1)
+            row += 1
         print("КОНЕЦ ЦИКЛА while ПО ddo")
-        z += 1
     print("КОНЕЦ ЦИКЛА for по z")
+    f.save(data_grafik)
     input()
 
 
