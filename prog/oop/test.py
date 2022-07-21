@@ -11,7 +11,7 @@ class Data_Transform:
         sheet = f["Первый лист"]
         i = 1
         for key in self.param:
-            self.param[key] = sheet.cell(row = self.row, column = i)
+            self.param[key] = sheet.cell(row = self.row, column = i).value()
             i += 1
         f.save("datagrafiks2.xlsx")
     def write_param(self):
