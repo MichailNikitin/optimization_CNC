@@ -1,4 +1,5 @@
 import sys
+import openpyxl
 import matplotlib
 matplotlib.use('Qt5Agg')
 
@@ -18,7 +19,7 @@ class MplCanvas(FigureCanvasQTAgg):
 
 class MainWindow(QtWidgets.QMainWindow):
 
-    def __init__(self, *args, **kwargs):
+    def __init__(self, *args, **kwargs, ):
         super(MainWindow, self).__init__(*args, **kwargs)
 
         sc = MplCanvas(self, width=5, height=4, dpi=100)

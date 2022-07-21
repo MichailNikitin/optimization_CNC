@@ -1,8 +1,10 @@
 import math as m
 import openpyxl
 
-M_PI = 3.14159265358979323846
-sp = pripd_pak = dpak = tp_ob = []
+sp = []
+pripd_pak = []
+dpak = []
+tp_ob = []
 
 
 def main():
@@ -21,11 +23,11 @@ def main():
     sigma = 180.0  # интенсивность напряжений, кг / мм2
     print("ввод исходных данных по шлифовальному кругу")
     stzat = 0.01  # степень затупления круга
-    dk = 300.0  # диметр круга, мм
+    dk = 300  # диаметр круга, мм
     print(f"dk={dk}   stzat={stzat}")
     print("ввод исходных данных по станку")
     podatl = 0.003  # Податливость технологической системы, мм / кг
-    vk = 30000. * 60.0  # окружная скорость вращения круга, мм / мин
+    vk = 30000.0 * 60.0  # окружная скорость вращения круга, мм / мин
     nd = 300.0  # частота вращения детали, об / мин
     print(f"nd={nd}  vk={vk}")
     print("ввод исходных данных по циклу")
@@ -43,9 +45,9 @@ def main():
     print(f"nd={nd}  zmax={zmax}  sp[0]={sp[0]}  sp[1]={sp[1]}  tp_ob[0]={tp_ob[0]}  tp_ob[1]={tp_ob[1]}")
     print(f"pripd_pak[0]={pripd_pak[0]}  pripd_pak[1]={pripd_pak[1]}  dpak[0]={dpak[0]}  dpak[1]={dpak[1]}")
     print("расчет коэффициентов")
-    k3 = M_PI * dz_max * b * sigma * etgb * nd / vk  # первый коф - т в формуле силы Ру через tф
+    k3 = m.pi * dz_max * b * sigma * etgb * nd / vk  # первый коф - т в формуле силы Ру через tф
     k4 = stzat * sigma * b * m.sqrt(dz_max * dk / (dz_max + dk)) / 3.0  # второй коф - т в формуле силы Ру через tф
-    с1_tf_ob = 0.5 * podatl * k4 / (1. + k3 * podatl)  # коэф в формуле tf_ob
+    с1_tf_ob = 0.5 * podatl * k4 / (1.0 + k3 * podatl)  # коэф в формуле tf_ob
     print(f"k3={k3}   k4={k4}  с1_tf_ob ={с1_tf_ob}")
     print("Закончен ввод данных")
     data_grafik = "datagrafiks2.xlsx"  # имя файла где будут записаны данные для графиков
@@ -61,7 +63,7 @@ def main():
     print("Задаем стартовые значения переменным")
     ddo = dz_max  # ddo-текущий диаметр детали контролируемый ПАКом  в процессе съема металла
     nsum = 0  # обнуляем номер оборота детали
-    time_cicle = 0.0  # обнуляем время цикла шлифования, мин
+    time_cicle = 0  # обнуляем время цикла шлифования, мин
     py = 0.0
     ypr_def = 0
     sf = 0.0  # Обнуляем фактическую минутную подачу
@@ -79,14 +81,15 @@ def main():
     sheet.cell(row=row, column=9, value=py);sheet.cell(row=row, column=10, value=ypr_def)
     sheet.cell(row=row, column=11, value=ddo);sheet.cell(row=row, column=12, value=dpak[z])
     sheet.cell(row=row, column=13, value=time_cicle);sheet.cell(row=row, column=14, value=tf_sum_i_1)
+    row += 1
     print("Начинаем расчет цикла шлифования ===========%%%%%%%%%%%%%%%%%%%%%%%%%")
-    for z in range(zmax):
+    for z in range(0, zmax):
         while(ddo > dpak[z]):
             nsum = nsum + 1
             tp_sum = tp_sum + tp_ob[z]  # считаем текущее значение накопленной программной подачи на каждом радиусе
-            c2_tf_ob = (tp_sum - tf_sum) / (1. + k3 * podatl)  # коэф в формуле tf_ob
+            c2_tf_ob = (tp_sum - tf_sum) / (1.0 + k3 * podatl)  # коэф в формуле tf_ob
             x = -с1_tf_ob + m.sqrt(с1_tf_ob * с1_tf_ob + c2_tf_ob)
-            tf_ob = x * x  # считаем текущее значение фактической подачи
+            tf_ob = x ** 2  # считаем текущее значение фактической подачи
             tf_sum = tf_sum + tf_ob  # считаем для j - го радиуса текущее значение накопленной фактической подачи
             tf_sum_i_1 = tf_sum - tf_ob  # считаем предшествующую накопленную фактическую подачу на i - 1 обороте
             sf = tf_ob * nd  # вычисляем фактическую минутную подачу
