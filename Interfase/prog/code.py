@@ -1,5 +1,6 @@
 from PyQt5 import QtWidgets
-from main import Ui_MainWindow  # импорт нашего сгенерированного файла
+from main import Ui_MainWindow
+from param import Ui_ParamWindow
 import sys
 
 class mywindow(QtWidgets.QMainWindow):
