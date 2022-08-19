@@ -5,6 +5,8 @@ class Data_Transform:
         self.param = param
         self.row = row
     def calculation(self):
+
+
         #тут вычисление новых значений
     def read_param(self):
         f = openpyxl.load_workbook("datagrafiks2.xlsx")
