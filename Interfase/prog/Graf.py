@@ -18,7 +18,7 @@ time_cicle = excel_data_df['time_cicle'].tolist()
 
 class MplCanvas(FigureCanvasQTAgg):
 
-    def __init__(self, parent=None, width=5, height=4, dpi=100):
+    def __init__(self, parent=None, width=10, height=8, dpi=400):
         fig = Figure(figsize=(width, height), dpi=dpi)
         self.axes = fig.add_subplot(111)
         super(MplCanvas, self).__init__(fig)
@@ -29,9 +29,9 @@ class MainWindow(QtWidgets.QMainWindow):
     def __init__(self, *args, **kwargs, ):
         super(MainWindow, self).__init__(*args, **kwargs)
 
-        sc = MplCanvas(self, width=5, height=4, dpi=100)
+        sc = MplCanvas(self)
 
-        sc.axes.plot(ddo, time_cicle)
+        sc.axes.plot(time_cicle, ddo)
 
         # Create toolbar, passing canvas as first parament, parent (self, the MainWindow) as second.
         toolbar = NavigationToolbar(sc, self)

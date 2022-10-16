@@ -1,22 +1,29 @@
 from PyQt5 import QtWidgets
+import PyQt5.QtCore as QtCore
 
-from main import Ui_MainWindow
-from param import Ui_StartWindow
+import main, param, type
 
 import sys
 
-UI_MAIN_WINDOW = Ui_MainWindow()
-UI_START_WINDOW = Ui_StartWindow()
 
-class mywindow(QtWidgets.QMainWindow):
+class mywindow(QtWidgets.QMainWindow, main.Ui_MainWindow):
+
     def __init__(self):
-        super(mywindow, self).__init__()
-        self.ui = UI_MAIN_WINDOW
-        self.ui.setupUi(self)
+        super().__init__()
+        self.setupUi(self)
+
+        self.create_new_graph.clicked.connect(self.__click_button)
+        self.import_2.clicked.connect(self.__click_break)
+
+    def __click_button(self):
+        print("click")
+
+    def __click_break(self):
+        print("click2")
 
 
-app = QtWidgets.QApplication([])
-application = mywindow()
-application.show()
-
-sys.exit(app.exec())
+if __name__ == '__main__':
+    app = QtWidgets.QApplication(sys.argv)
+    application = mywindow()
+    application.show()
+    app.exec_()

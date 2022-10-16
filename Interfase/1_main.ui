@@ -36,37 +36,21 @@
     <property name="verticalSpacing">
      <number>7</number>
     </property>
-    <item row="4" column="1">
-     <widget class="QPushButton" name="import_2">
-      <property name="sizePolicy">
-       <sizepolicy hsizetype="Expanding" vsizetype="Maximum">
-        <horstretch>0</horstretch>
-        <verstretch>0</verstretch>
-       </sizepolicy>
+    <item row="3" column="2">
+     <spacer name="indent_Right">
+      <property name="orientation">
+       <enum>Qt::Horizontal</enum>
       </property>
-      <property name="minimumSize">
+      <property name="sizeType">
+       <enum>QSizePolicy::Expanding</enum>
+      </property>
+      <property name="sizeHint" stdset="0">
        <size>
-        <width>300</width>
-        <height>80</height>
+        <width>68</width>
+        <height>55</height>
        </size>
       </property>
-      <property name="font">
-       <font>
-        <family>Tahoma</family>
-        <pointsize>12</pointsize>
-       </font>
-      </property>
-      <property name="styleSheet">
-       <string notr="true">QPushButton
-{
-	border-radius: 9px;
-	background-color: rgb(187, 218, 255);
-}</string>
-      </property>
-      <property name="text">
-       <string>Импортировать</string>
-      </property>
-     </widget>
+     </spacer>
     </item>
     <item row="0" column="1">
      <spacer name="indent_Above">
@@ -132,22 +116,6 @@
       </property>
      </spacer>
     </item>
-    <item row="3" column="2">
-     <spacer name="indent_Right">
-      <property name="orientation">
-       <enum>Qt::Horizontal</enum>
-      </property>
-      <property name="sizeType">
-       <enum>QSizePolicy::Expanding</enum>
-      </property>
-      <property name="sizeHint" stdset="0">
-       <size>
-        <width>68</width>
-        <height>55</height>
-       </size>
-      </property>
-     </spacer>
-    </item>
     <item row="4" column="0">
      <spacer name="indent_Left">
       <property name="orientation">
@@ -164,9 +132,58 @@
       </property>
      </spacer>
     </item>
+    <item row="4" column="1">
+     <widget class="QPushButton" name="import_2">
+      <property name="sizePolicy">
+       <sizepolicy hsizetype="Expanding" vsizetype="Maximum">
+        <horstretch>0</horstretch>
+        <verstretch>0</verstretch>
+       </sizepolicy>
+      </property>
+      <property name="minimumSize">
+       <size>
+        <width>300</width>
+        <height>80</height>
+       </size>
+      </property>
+      <property name="font">
+       <font>
+        <family>Tahoma</family>
+        <pointsize>12</pointsize>
+       </font>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">QPushButton
+{
+	border-radius: 9px;
+	background-color: rgb(187, 218, 255);
+}</string>
+      </property>
+      <property name="text">
+       <string>Импортировать</string>
+      </property>
+     </widget>
+    </item>
    </layout>
   </widget>
  </widget>
  <resources/>
- <connections/>
+ <connections>
+  <connection>
+   <sender>create_new_graph</sender>
+   <signal>clicked()</signal>
+   <receiver>MainWindow</receiver>
+   <slot>close()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>474</x>
+     <y>213</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>742</x>
+     <y>284</y>
+    </hint>
+   </hints>
+  </connection>
+ </connections>
 </ui>
