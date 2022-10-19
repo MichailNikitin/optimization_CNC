@@ -1,6 +1,8 @@
 import sys
 import openpyxl
+import matplotlib.pyplot as plt
 import matplotlib
+import pylab
 
 matplotlib.use('Qt5Agg')
 
@@ -21,6 +23,8 @@ class MplCanvas(FigureCanvasQTAgg):
     def __init__(self, parent=None, width=10, height=8, dpi=400):
         fig = Figure(figsize=(width, height), dpi=dpi)
         self.axes = fig.add_subplot(111)
+        self.axes.set_xlabel('Время подачи, минуты')
+        self.axes.set_ylabel('Подача(фактическая и программная), мм')
         super(MplCanvas, self).__init__(fig)
 
 
@@ -31,7 +35,8 @@ class MainWindow(QtWidgets.QMainWindow):
 
         sc = MplCanvas(self)
 
-        sc.axes.plot(time_cicle, ddo)
+        sc.axes.plot(excel_data_df['time_cicle'].tolist(), excel_data_df['tp_ob[z]'].tolist())
+        sc.axes.plot(excel_data_df['time_cicle'].tolist(), excel_data_df['tf_ob'].tolist())
 
         # Create toolbar, passing canvas as first parament, parent (self, the MainWindow) as second.
         toolbar = NavigationToolbar(sc, self)
